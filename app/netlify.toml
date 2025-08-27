@@ -1,0 +1,12 @@
+[[redirects]]
+from = '/*'
+to = '/index.html'
+status = 200
+
+
+[build]
+base="app"
+publish="dist"
+command = 'npm run build'
+functions = 'functions'
+submodules = false

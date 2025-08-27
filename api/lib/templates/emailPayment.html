@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facturation mensuelle</title>
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        padding: 20px;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
+      .paragraph {
+        margin-bottom: 12px;
+      }
+      .logo {
+        width: 30px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="logo"
+        src="https://firebasestorage.googleapis.com/v0/b/likeme-2b112.appspot.com/o/icon.png?alt=media&token=7810969c-333b-4aad-b26e-c61a6013abdb"
+      />
+      <div class="title">Lien de paiement - Période mensuelle</div>
+
+      <div class="paragraph">Bonjour,</div>
+
+      <div class="paragraph">
+        Voici le lien de paiement pour la période du
+        <strong>{{ startDate }}</strong> au <strong>{{ endDate }}</strong>
+        {{ serviceLabel }}
+      </div>
+
+      <div class="paragraph">
+        Identifiant(s)
+        <br />
+        <strong>{{ serviceId }}</strong>
+      </div>
+
+      <div class="paragraph">
+        Montant dû sur cette période :
+        <strong>{{ price }} €</strong>.
+      </div>
+
+      <div class="paragraph">
+        Lien de paiement :
+        <a href="{{ paymentLink }}">Réglez votre facture ici</a>
+      </div>
+
+      <div class="paragraph">
+        Merci de procéder au règlement dans les plus brefs délais.
+      </div>
+
+      <div class="paragraph">
+        Cordialement,<br />
+        <em>L'équipe Playtime</em>
+      </div>
+    </div>
+  </body>
+</html>
